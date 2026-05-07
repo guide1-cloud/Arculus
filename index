@@ -19,7 +19,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.getarculus.com/desktop">
-    <meta property="twitter:title" content=" Arculus Self-Custody Desktop App | Secure Crypto Cold Storage">
+    <meta property="twitter:title" content="Download Arculus Self-Custody Desktop App | Secure Crypto Cold Storage">
     <meta property="twitter:description" content="Arculus Self-Custody Desktop App brings cold storage to your desktop. Companion or standalone, secure import/export, .NET 10 powered. Download for Windows & Mac.">
     <meta property="twitter:image" content="https://www.getarculus.com/assets/arculus/login-cover.jpg">
 
@@ -193,10 +193,10 @@
                     <a href="#features" class="hover:text-primary transition-smooth">Features</a>
                     <a href="#how" class="hover:text-primary transition-smooth">How it Works</a>
                     <a href="#security" class="hover:text-primary transition-smooth">Security</a>
-                    <a href="https://api.files.link/v1/p/6cf0bdc0-18ff-4812-b3ac-1f5a979e7b70" class="hover:text-primary transition-smooth">Download</a>
+                    <a href="#download" class="hover:text-primary transition-smooth">Download</a>
                     <a href="https://support.arculus.co" class="hover:text-primary transition-smooth">Support</a>
                 </nav>
-                <a href="https://api.files.link/v1/p/6cf0bdc0-18ff-4812-b3ac-1f5a979e7b70" class="btn-primary text-sm">
+                <a href="#download" class="btn-primary text-sm">
                     <i data-lucide="download" style="width:16px;height:16px"></i> Download
                 </a>
             </div>
@@ -220,10 +220,10 @@
                     <p class="mt-3 text-2xl font-semibold tracking-tight text-foreground">Your Keys. Your Crypto.</p>
 
                     <div class="mt-8 flex flex-wrap items-center gap-4">
-                        <a href="https://api.files.link/v1/p/6cf0bdc0-18ff-4812-b3ac-1f5a979e7b70" class="btn-primary">
+                        <a href="#download" class="btn-primary">
                             <i data-lucide="download" style="width:18px;height:18px"></i> Download for Windows
                         </a>
-                        <a href="https://api.files.link/v1/p/6cf0bdc0-18ff-4812-b3ac-1f5a979e7b70" class="btn-outline">
+                        <a href="#download" class="btn-outline">
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 1.44S8.22 5 6 5a4.9 4.9 0 0 0-5 4.78C1 14 4 22 7 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></svg>
                             Download for Mac
                         </a>
@@ -491,7 +491,7 @@
                     <ul class="space-y-2 text-sm text-secondary-foreground/70">
                         <li><a href="https://www.getarculus.com/products/arculus-wallet/" class="hover:text-primary-foreground">Arculus Wallet</a></li>
                         <li><a href="https://www.getarculus.com/products/arculus-authenticate/" class="hover:text-primary-foreground">Authenticate</a></li>
-                        <li><a href="https://api.files.link/v1/p/6cf0bdc0-18ff-4812-b3ac-1f5a979e7b70" class="hover:text-primary-foreground">Desktop App</a></li>
+                        <li><a href="#download" class="hover:text-primary-foreground">Desktop App</a></li>
                     </ul>
                 </div>
                 <div>
