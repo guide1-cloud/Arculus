@@ -1,0 +1,194 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-full: 9999px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.875rem;
+
+  /* Arculus palette */
+  --background: oklch(0.985 0.012 180);          /* light mint pastel */
+  --foreground: oklch(0.15 0.01 260);             /* near-black */
+  --surface: oklch(1 0 0);                        /* white cards */
+  --surface-foreground: oklch(0.18 0.01 260);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.01 260);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.01 260);
+
+  --primary: oklch(0.55 0.27 295);                /* Arculus purple */
+  --primary-foreground: oklch(0.99 0 0);
+  --primary-glow: oklch(0.7 0.25 295);
+
+  --secondary: oklch(0.12 0.02 260);              /* dark navy/black */
+  --secondary-foreground: oklch(0.98 0 0);
+
+  --muted: oklch(0.95 0.012 200);
+  --muted-foreground: oklch(0.45 0.02 260);
+
+  --accent: oklch(0.93 0.04 295);                 /* light purple */
+  --accent-foreground: oklch(0.3 0.18 295);
+
+  --destructive: oklch(0.6 0.24 27);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  --border: oklch(0.9 0.015 230);
+  --input: oklch(0.92 0.012 230);
+  --ring: oklch(0.55 0.27 295);
+
+  --gradient-hero: radial-gradient(1200px 600px at 80% 10%, oklch(0.93 0.06 295 / 0.6), transparent 60%),
+                   radial-gradient(900px 500px at 10% 90%, oklch(0.92 0.05 200 / 0.6), transparent 60%);
+  --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
+  --gradient-dark: linear-gradient(180deg, oklch(0.15 0.02 260), oklch(0.08 0.02 260));
+
+  --shadow-card: 0 10px 40px -12px oklch(0.2 0.05 260 / 0.15);
+  --shadow-glow: 0 20px 60px -20px oklch(0.55 0.27 295 / 0.45);
+  --shadow-soft: 0 2px 12px -4px oklch(0.2 0.05 260 / 0.1);
+
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark {
+  --background: oklch(0.1 0.02 260);
+  --foreground: oklch(0.98 0 0);
+  --surface: oklch(0.15 0.02 260);
+  --surface-foreground: oklch(0.98 0 0);
+  --card: oklch(0.15 0.02 260);
+  --card-foreground: oklch(0.98 0 0);
+  --border: oklch(1 0 0 / 0.1);
+  --muted: oklch(0.2 0.02 260);
+  --muted-foreground: oklch(0.7 0.02 260);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    background-image: var(--gradient-hero);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glow-primary { box-shadow: var(--shadow-glow); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .transition-smooth { transition: var(--transition-smooth); }
+
+  .btn-primary {
+    background: var(--gradient-primary);
+    color: var(--color-primary-foreground);
+    border-radius: 9999px;
+    padding: 0.95rem 1.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-smooth);
+    box-shadow: 0 8px 24px -8px oklch(0.55 0.27 295 / 0.5);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow); }
+
+  .btn-outline {
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    border-radius: 9999px;
+    padding: 0.85rem 1.6rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition-smooth);
+    background: transparent;
+  }
+  .btn-outline:hover { background: var(--color-primary); color: var(--color-primary-foreground); }
+
+  .feature-card {
+    background: var(--color-surface);
+    border-radius: 1.25rem;
+    padding: 2rem;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-smooth);
+    border: 1px solid var(--color-border);
+  }
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card);
+    border-color: oklch(0.55 0.27 295 / 0.3);
+  }
+
+  .icon-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.875rem;
+    background: var(--color-accent);
+    color: var(--color-primary);
+  }
+
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+  }
+  .animate-fade-up { animation: fade-up 0.6s ease-out both; }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
